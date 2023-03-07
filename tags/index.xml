@@ -1,7 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Tags - Tag - 佳丽打倒小怪兽</title>
+        <title>Tags - Tag - 佳丽打怪升级</title>
         <link>http://example.org/tags/</link>
-        <description>Tags - Tag - 佳丽打倒小怪兽</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><atom:link href="http://example.org/tags/" rel="self" type="application/rss+xml" /></channel>
+        <description>Tags - Tag - 佳丽打怪升级</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 06 Mar 2023 13:58:36 &#43;0800</lastBuildDate><atom:link href="http://example.org/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>node</title>
+    <link>http://example.org/tags/node/</link>
+    <pubDate>Mon, 06 Mar 2023 13:58:36 &#43;0800</pubDate>
+    <author>佳丽</author>
+    <guid>http://example.org/tags/node/</guid>
+    <description><![CDATA[]]></description>
+</item>
+</channel>
 </rss>
