@@ -19,7 +19,7 @@
     <pubDate>Mon, 06 Mar 2023 13:58:36 &#43;0800</pubDate>
     <author>佳丽</author>
     <guid>http://example.org/posts/mac%E5%AE%89%E8%A3%85nvm/</guid>
-    <description><![CDATA[nvm切换不同版本的node 最近项目中出现了一个问题，就是node-sass这个包一直安装失败。后来发现电脑中的node.js的版本太高导致]]></description>
+    <description><![CDATA[nvm 切换不同版本的 node 最近项目中出现了一个问题，就是 node-sass 这个包一直安装失败。后来发现电脑中的 node.js 的版本太高导致。node-sass 是不支持 node16 以上的版]]></description>
 </item>
 </channel>
 </rss>
