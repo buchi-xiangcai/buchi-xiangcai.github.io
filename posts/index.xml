@@ -3,12 +3,12 @@
         <title>All Posts - 佳丽打怪升级</title>
         <link>http://example.org/posts/</link>
         <description>All Posts | 佳丽打怪升级</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>1157237955@qq.com (coderabbit)</managingEditor>
-            <webMaster>1157237955@qq.com (coderabbit)</webMaster><lastBuildDate>Mon, 06 Mar 2023 20:19:46 &#43;0800</lastBuildDate><atom:link href="http://example.org/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>321121604@qq.com (佳丽)</managingEditor>
+            <webMaster>321121604@qq.com (佳丽)</webMaster><lastBuildDate>Mon, 06 Mar 2023 20:19:46 &#43;0800</lastBuildDate><atom:link href="http://example.org/posts/" rel="self" type="application/rss+xml" /><item>
     <title>First_post</title>
     <link>http://example.org/first_post/</link>
     <pubDate>Mon, 06 Mar 2023 20:19:46 &#43;0800</pubDate>
-    <author>coderabbit</author>
+    <author>佳丽</author>
     <guid>http://example.org/first_post/</guid>
     <description><![CDATA[]]></description>
 </item>
@@ -16,7 +16,7 @@
     <title>mac安装nvm切换Node版本</title>
     <link>http://example.org/mac%E5%AE%89%E8%A3%85nvm/</link>
     <pubDate>Mon, 06 Mar 2023 13:58:36 &#43;0800</pubDate>
-    <author>coderabbit</author>
+    <author>佳丽</author>
     <guid>http://example.org/mac%E5%AE%89%E8%A3%85nvm/</guid>
     <description><![CDATA[nvm 切换不同版本的 node 最近项目中出现了一个问题，就是 node-sass 这个包一直安装失败。后来发现电脑中的 node.js 的版本太高导致。node-sass 是不支持 node16 以上的版]]></description>
 </item>
@@ -24,7 +24,7 @@
     <title>vue基础</title>
     <link>http://example.org/vue%E7%AC%94%E8%AE%B0/</link>
     <pubDate>Mon, 06 Mar 2023 13:58:36 &#43;0800</pubDate>
-    <author>coderabbit</author>
+    <author>佳丽</author>
     <guid>http://example.org/vue%E7%AC%94%E8%AE%B0/</guid>
     <description><![CDATA[push() pop() shift() splice() sort() reverse() filter() push() 方法可向数组的末尾添加一个或多个元素，并返回新的长度。 1 2 3 4 5 6 7 8 9 10 11 new Vue({ data:{ arr: [&#39;苹果&#39;,&#39;香]]></description>
 </item>
