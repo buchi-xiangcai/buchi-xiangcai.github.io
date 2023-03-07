@@ -1,15 +1,7 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Categories - Category - 佳丽打怪升级</title>
+        <title>Categories - Category - 我的全新 Hugo 网站</title>
         <link>http://example.org/categories/</link>
-        <description>Categories - Category - 佳丽打怪升级</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 06 Mar 2023 13:58:36 &#43;0800</lastBuildDate><atom:link href="http://example.org/categories/" rel="self" type="application/rss+xml" /><item>
-    <title>其他</title>
-    <link>http://example.org/categories/%E5%85%B6%E4%BB%96/</link>
-    <pubDate>Mon, 06 Mar 2023 13:58:36 &#43;0800</pubDate>
-    <author>佳丽</author>
-    <guid>http://example.org/categories/%E5%85%B6%E4%BB%96/</guid>
-    <description><![CDATA[]]></description>
-</item>
-</channel>
+        <description>Categories - Category - 我的全新 Hugo 网站</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><atom:link href="http://example.org/categories/" rel="self" type="application/rss+xml" /></channel>
 </rss>

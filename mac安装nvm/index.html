@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>mac安装nvm切换Node版本 - 佳丽打怪升级</title><meta name="Description" content="第二大脑"><meta property="og:title" content="mac安装nvm切换Node版本" />
+<meta property="og:description" content="nvm 切换不同版本的 node 最近项目中出现了一个问题，就是 node-sass 这个包一直安装失败。后来发现电脑中的 node.js 的版本太高导致。node-sass 是不支持 node16 以上的版" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/mac%E5%AE%89%E8%A3%85nvm/" /><meta property="og:image" content="http://example.org/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-03-06T13:58:36+08:00" />
+<meta property="article:modified_time" content="2023-03-06T13:58:36+08:00" /><meta property="og:site_name" content="第二大脑" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://example.org/logo.png"/>
+
+<meta name="twitter:title" content="mac安装nvm切换Node版本"/>
+<meta name="twitter:description" content="nvm 切换不同版本的 node 最近项目中出现了一个问题，就是 node-sass 这个包一直安装失败。后来发现电脑中的 node.js 的版本太高导致。node-sass 是不支持 node16 以上的版"/>
+<meta name="application-name" content="第二大脑">
+<meta name="apple-mobile-web-app-title" content="第二大脑"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/logo.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.org/mac%E5%AE%89%E8%A3%85nvm/" /><link rel="prev" href="http://example.org/vue%E7%AC%94%E8%AE%B0/" /><link rel="next" href="http://example.org/first_post/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "mac安装nvm切换Node版本",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/example.org\/mac%E5%AE%89%E8%A3%85nvm\/"
+        },"genre": "posts","keywords": "node","wordcount":  573 ,
+        "url": "http:\/\/example.org\/mac%E5%AE%89%E8%A3%85nvm\/","datePublished": "2023-03-06T13:58:36+08:00","dateModified": "2023-03-06T13:58:36+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "coderabbit"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="佳丽打怪升级"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/logo.png"
+        data-srcset="/logo.png, /logo.png 1.5x, /logo.png 2x"
+        data-sizes="auto"
+        alt="/logo.png"
+        title="/logo.png" />第二大脑</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="佳丽打怪升级"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/logo.png"
+        data-srcset="/logo.png, /logo.png 1.5x, /logo.png 2x"
+        data-sizes="auto"
+        alt="/logo.png"
+        title="/logo.png" />第二大脑</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content always-active" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">mac安装nvm切换Node版本</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://github.com/coderabbit214" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>coderabbit</a></span>&nbsp;<span class="post-category">included in <a href="/categories/%E5%85%B6%E4%BB%96/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>其他</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-03-06">2023-03-06</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;573 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;2 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1在-vscode-中打开终端下载安装包最好使用流量下载">1.在 vscode 中打开终端，下载安装包：（最好使用流量下载）</a></li>
+        <li><a href="#2-刷新使其全局生效">2. 刷新使其全局生效：</a></li>
+        <li><a href="#3验证生效">3.验证生效</a></li>
+        <li><a href="#4常用命令">4.常用命令</a></li>
+        <li><a href="#5-举例">5. 举例：</a></li>
+        <li><a href="#6注意事项">6.注意事项</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="nvm-切换不同版本的-node">nvm 切换不同版本的 node</h1>
+<p>最近项目中出现了一个问题，就是 node-sass 这个包一直安装失败。后来发现电脑中的 node.js 的版本太高导致。node-sass 是不支持 node16 以上的版本的。</p>
+<p>可以通过 nvm 在电脑上切换不同版本的 node.js</p>
+<p>安装方式：</p>
+<h3 id="1在-vscode-中打开终端下载安装包最好使用流量下载">1.在 vscode 中打开终端，下载安装包：（最好使用流量下载）</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="2-刷新使其全局生效">2. 刷新使其全局生效：</h3>
+<p>正常安装好之后，nvm 会自动在 mac 电脑的全局配置文件中，配置好相应的环境变量</p>
+<p>位置为：~/.bash_profile</p>
+<p>内容为：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">export NVM_DIR=&#34;$HOME/.nvm&#34;
+</span></span><span class="line"><span class="cl">[ -s &#34;$NVM_DIR/nvm.sh&#34; ] &amp;&amp; \. &#34;$NVM_DIR/nvm.sh&#34;  # This loads nvm
+</span></span><span class="line"><span class="cl">[ -s &#34;$NVM_DIR/bash_completion&#34; ] &amp;&amp; \. &#34;$NVM_DIR/bash_completion&#34;  # This loads nvm bash_completion
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>上面的内容无需操作，但是此时环境变量并没有生效，我们需要刷新环境变量：执行如下命令</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">source ~/.bash_profile
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="3验证生效">3.验证生效</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">nvm -v
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>此时如果正确打印出版本号，代表已经安装成功。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://images-jsh.oss-cn-beijing.aliyuncs.com/ljl/%E6%88%AA%E5%B1%8F2023-03-07%2009.16.32.png"
+        data-srcset="https://images-jsh.oss-cn-beijing.aliyuncs.com/ljl/%E6%88%AA%E5%B1%8F2023-03-07%2009.16.32.png, https://images-jsh.oss-cn-beijing.aliyuncs.com/ljl/%E6%88%AA%E5%B1%8F2023-03-07%2009.16.32.png 1.5x, https://images-jsh.oss-cn-beijing.aliyuncs.com/ljl/%E6%88%AA%E5%B1%8F2023-03-07%2009.16.32.png 2x"
+        data-sizes="auto"
+        alt="https://images-jsh.oss-cn-beijing.aliyuncs.com/ljl/%E6%88%AA%E5%B1%8F2023-03-07%2009.16.32.png"
+        title="截屏2023-03-07 09.16.32" /></p>
+<h3 id="4常用命令">4.常用命令</h3>
+<p>nvm 常用命令 nvm install stable ## 安装最新稳定版 node，当前是 node v9.5.0 (npm v5.6.0)</p>
+<p>nvm install <version> ## 安装指定版本，可模糊安装，如：安装 v4.4.0，既可 nvm install v4.4.0，又可 nvm install 4.4</p>
+<p>nvm uninstall <version> ## 删除已安装的指定版本，语法与 install 类似</p>
+<p>nvm use <version> ## 切换使用指定的版本 node</p>
+<p>nvm ls ## 列出所有安装的版本</p>
+<p>nvm ls-remote ## 列出所有远程<a href="https://cloud.tencent.com/product/cvm?from=10680" target="_blank" rel="noopener noreffer ">服务器</a>的版本（官方 node version list）</p>
+<p>nvm current ## 显示当前的版本</p>
+<p>nvm alias <name> <version> ## 给不同的版本号添加别名</p>
+<p>nvm unalias <name> ## 删除已定义的别名</p>
+<p>nvm reinstall-packages <version> ## 在当前版本 node 环境下，重新全局安装指定版本号的 npm 包</p>
+<h3 id="5-举例">5. 举例：</h3>
+<p>我需要使用 node14 版本：</p>
+<p>nvm install 14 #等待安装结束</p>
+<p>nvm use 14</p>
+<h3 id="6注意事项">6.注意事项</h3>
+<p>如果使用过程中，又出现 nvm command not found，重新执行如下命令：</p>
+<p>source ~/.bash_profile</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://images-jsh.oss-cn-beijing.aliyuncs.com/ljl/%E6%88%AA%E5%B1%8F2023-03-07%2009.18.46.png"
+        data-srcset="https://images-jsh.oss-cn-beijing.aliyuncs.com/ljl/%E6%88%AA%E5%B1%8F2023-03-07%2009.18.46.png, https://images-jsh.oss-cn-beijing.aliyuncs.com/ljl/%E6%88%AA%E5%B1%8F2023-03-07%2009.18.46.png 1.5x, https://images-jsh.oss-cn-beijing.aliyuncs.com/ljl/%E6%88%AA%E5%B1%8F2023-03-07%2009.18.46.png 2x"
+        data-sizes="auto"
+        alt="https://images-jsh.oss-cn-beijing.aliyuncs.com/ljl/%E6%88%AA%E5%B1%8F2023-03-07%2009.18.46.png"
+        title="截屏2023-03-07 09.18.46" /></p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2023-03-06</span>
+            </div><div class="post-info-license">
+                <span><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/mac%E5%AE%89%E8%A3%85nvm/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/node/">node</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/vue%E7%AC%94%E8%AE%B0/" class="prev" rel="prev" title="vue基础"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>vue基础</a>
+            <a href="/first_post/" class="next" rel="next" title="First_post">First_post<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2018 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://github.com/coderabbit214" target="_blank">coderabbit</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":50,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

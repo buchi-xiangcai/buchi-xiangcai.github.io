@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>vue - Category - 佳丽打怪升级</title>
+        <link>http://example.org/categories/vue/</link>
+        <description>vue - Category - 佳丽打怪升级</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>1157237955@qq.com (coderabbit)</managingEditor>
+            <webMaster>1157237955@qq.com (coderabbit)</webMaster><lastBuildDate>Mon, 06 Mar 2023 13:58:36 &#43;0800</lastBuildDate><atom:link href="http://example.org/categories/vue/" rel="self" type="application/rss+xml" /><item>
+    <title>vue基础</title>
+    <link>http://example.org/vue%E7%AC%94%E8%AE%B0/</link>
+    <pubDate>Mon, 06 Mar 2023 13:58:36 &#43;0800</pubDate>
+    <author>coderabbit</author>
+    <guid>http://example.org/vue%E7%AC%94%E8%AE%B0/</guid>
+    <description><![CDATA[push() pop() shift() splice() sort() reverse() filter() push() 方法可向数组的末尾添加一个或多个元素，并返回新的长度。 1 2 3 4 5 6 7 8 9 10 11 new Vue({ data:{ arr: [&#39;苹果&#39;,&#39;香]]></description>
+</item>
+</channel>
+</rss>
