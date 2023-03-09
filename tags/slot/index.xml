@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>slot - Tag - 佳丽打怪升级</title>
+        <link>http://example.org/tags/slot/</link>
+        <description>slot - Tag - 佳丽打怪升级</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>321121604@qq.com (佳丽)</managingEditor>
+            <webMaster>321121604@qq.com (佳丽)</webMaster><lastBuildDate>Mon, 06 Mar 2023 13:58:36 &#43;0800</lastBuildDate><atom:link href="http://example.org/tags/slot/" rel="self" type="application/rss+xml" /><item>
+    <title>插槽、动态组件传参、打包</title>
+    <link>http://example.org/2023-03-06-%E6%8F%92%E6%A7%BD%E5%8A%A8%E6%80%81%E7%BB%84%E4%BB%B6%E4%BC%A0%E5%8F%82%E6%89%93%E5%8C%85/</link>
+    <pubDate>Mon, 06 Mar 2023 13:58:36 &#43;0800</pubDate>
+    <author>佳丽</author>
+    <guid>http://example.org/2023-03-06-%E6%8F%92%E6%A7%BD%E5%8A%A8%E6%80%81%E7%BB%84%E4%BB%B6%E4%BC%A0%E5%8F%82%E6%89%93%E5%8C%85/</guid>
+    <description><![CDATA[一、插槽Slot的基本使用（测试数据的作用域） 1.基本使用：组件的内容全部替换到插槽中 2.数据的作用域：父组件的数据也可以显示到子组件中 二、]]></description>
+</item>
+</channel>
+</rss>

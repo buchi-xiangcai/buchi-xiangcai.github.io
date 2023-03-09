@@ -8,9 +8,10 @@
             <loc>http://example.org/categories/</loc><lastmod>2023-03-06T13:58:36&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>http://example.org/mac%E5%AE%89%E8%A3%85nvm/</loc><lastmod>2023-03-06T13:58:36&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>http://example.org/tags/node/</loc><lastmod>2023-03-06T13:58:36&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://example.org/tags/slot/</loc><lastmod>2023-03-06T13:58:36&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>http://example.org/tags/</loc><lastmod>2023-03-06T13:58:36&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>http://example.org/tags/vue/</loc><lastmod>2023-03-06T13:58:36&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>http://example.org/categories/vue/</loc><lastmod>2023-03-06T13:58:36&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>http://example.org/vue%E7%AC%94%E8%AE%B0/</loc><lastmod>2023-03-06T13:58:36&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>http://example.org/categories/%E5%85%B6%E4%BB%96/</loc><lastmod>2023-03-06T13:58:36&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>http://example.org/%E6%8F%92%E6%A7%BD%E5%8A%A8%E6%80%81%E7%BB%84%E4%BB%B6%E4%BC%A0%E5%8F%82/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url></urlset>
+            <loc>http://example.org/2023-03-06-%E6%8F%92%E6%A7%BD%E5%8A%A8%E6%80%81%E7%BB%84%E4%BB%B6%E4%BC%A0%E5%8F%82%E6%89%93%E5%8C%85/</loc><lastmod>2023-03-06T13:58:36&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url></urlset>

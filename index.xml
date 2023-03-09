@@ -31,12 +31,12 @@
     <description><![CDATA[push() pop() shift() splice() sort() reverse() filter() push() 方法可向数组的末尾添加一个或多个元素，并返回新的长度。 1 2 3 4 5 6 7 8 9 10 11 new Vue({ data:{ arr: [&#39;苹果&#39;,&#39;香]]></description>
 </item>
 <item>
-    <title></title>
-    <link>http://example.org/%E6%8F%92%E6%A7%BD%E5%8A%A8%E6%80%81%E7%BB%84%E4%BB%B6%E4%BC%A0%E5%8F%82/</link>
-    <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
+    <title>插槽、动态组件传参、打包</title>
+    <link>http://example.org/2023-03-06-%E6%8F%92%E6%A7%BD%E5%8A%A8%E6%80%81%E7%BB%84%E4%BB%B6%E4%BC%A0%E5%8F%82%E6%89%93%E5%8C%85/</link>
+    <pubDate>Mon, 06 Mar 2023 13:58:36 &#43;0800</pubDate>
     <author>佳丽</author>
-    <guid>http://example.org/%E6%8F%92%E6%A7%BD%E5%8A%A8%E6%80%81%E7%BB%84%E4%BB%B6%E4%BC%A0%E5%8F%82/</guid>
-    <description><![CDATA[title: &lsquo;vue基础&rsquo; subtitle: &rsquo;' date: 2023-03-09T13:58:36+08:00 draft: false tags: [slot][组件] categories: [vue] hiddenFromHomePage: false hiddenFromSearch: false featuredImage: &rsquo;' featuredImagePreview: '' license: &lsquo;CC BY-NC 4.0&rsquo; 一、插槽Slot的基本使用（测试数据的]]></description>
+    <guid>http://example.org/2023-03-06-%E6%8F%92%E6%A7%BD%E5%8A%A8%E6%80%81%E7%BB%84%E4%BB%B6%E4%BC%A0%E5%8F%82%E6%89%93%E5%8C%85/</guid>
+    <description><![CDATA[一、插槽Slot的基本使用（测试数据的作用域） 1.基本使用：组件的内容全部替换到插槽中 2.数据的作用域：父组件的数据也可以显示到子组件中 二、]]></description>
 </item>
 </channel>
 </rss>

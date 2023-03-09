@@ -1,21 +1,6 @@
-# 
+# 插槽、动态组件传参、打包
 
-title: 'vue基础'
-subtitle: ''
-date: 2023-03-09T13:58:36+08:00
-draft: false
 
-tags: [slot][组件]
-categories: [vue]
-
-hiddenFromHomePage: false
-hiddenFromSearch: false
-
-featuredImage: ''
-featuredImagePreview: ''
-
-license: '<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
----
 # 一、插槽Slot的基本使用（测试数据的作用域）
 
 ## 1.基本使用：组件的内容全部替换到插槽中
