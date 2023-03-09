@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title> - 佳丽打怪升级</title><meta name="Description" content="打怪升级"><meta property="og:title" content="" />
+<meta property="og:description" content="title: &lsquo;vue基础&rsquo; subtitle: &rsquo;&#39; date: 2023-03-09T13:58:36&#43;08:00 draft: false tags: [slot][组件] categories: [vue] hiddenFromHomePage: false hiddenFromSearch: false featuredImage: &rsquo;&#39; featuredImagePreview: &#39;&#39; license: &lsquo;CC BY-NC 4.0&rsquo; 一、插槽Slot的基本使用（测试数据的" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/%E6%8F%92%E6%A7%BD%E5%8A%A8%E6%80%81%E7%BB%84%E4%BB%B6%E4%BC%A0%E5%8F%82/" /><meta property="og:image" content="http://example.org/logo.png"/><meta property="article:section" content="posts" />
+
+<meta property="og:site_name" content="打怪升级" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://example.org/logo.png"/>
+
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="title: &lsquo;vue基础&rsquo; subtitle: &rsquo;&#39; date: 2023-03-09T13:58:36&#43;08:00 draft: false tags: [slot][组件] categories: [vue] hiddenFromHomePage: false hiddenFromSearch: false featuredImage: &rsquo;&#39; featuredImagePreview: &#39;&#39; license: &lsquo;CC BY-NC 4.0&rsquo; 一、插槽Slot的基本使用（测试数据的"/>
+<meta name="application-name" content="第二大脑">
+<meta name="apple-mobile-web-app-title" content="第二大脑"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.org/%E6%8F%92%E6%A7%BD%E5%8A%A8%E6%80%81%E7%BB%84%E4%BB%B6%E4%BC%A0%E5%8F%82/" /><link rel="next" href="http://example.org/vue%E7%AC%94%E8%AE%B0/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/example.org\/%E6%8F%92%E6%A7%BD%E5%8A%A8%E6%80%81%E7%BB%84%E4%BB%B6%E4%BC%A0%E5%8F%82\/"
+        },"genre": "posts","wordcount":  1837 ,
+        "url": "http:\/\/example.org\/%E6%8F%92%E6%A7%BD%E5%8A%A8%E6%80%81%E7%BB%84%E4%BB%B6%E4%BC%A0%E5%8F%82\/","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "佳丽"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="佳丽打怪升级">打怪升级</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="佳丽打怪升级">打怪升级</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content always-active" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX"></h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://github.com/buchi-xiangcai" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>佳丽</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="0001-01-01">0001-01-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1837 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;4 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#license-a-rellicense-external-nofollow-noopener-noreffer-hrefhttpscreativecommonsorglicensesby-nc40-target_blankcc-by-nc-40a">license: &lsquo;<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>&rsquo;</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#1基本使用组件的内容全部替换到插槽中">1.基本使用：组件的内容全部替换到插槽中</a></li>
+    <li><a href="#2数据的作用域父组件的数据也可以显示到子组件中">2.数据的作用域：父组件的数据也可以显示到子组件中</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#1基本使用">1.基本使用：</a></li>
+    <li><a href="#2默认插槽名">2.默认插槽名：</a></li>
+    <li><a href="#3动态插槽名">3.动态插槽名：</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#1渲染作用域">1.渲染作用域：</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#1作用">1.作用：</a></li>
+    <li><a href="#2简单理解">2.简单理解：</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#1概念">1.概念</a></li>
+    <li><a href="#2基本用法">2.基本用法：</a></li>
+    <li><a href="#3is绑定的值是什么内容">3.<code>is</code>绑定的值是什么内容？</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#1动态组件传参跟普通组件一样">1.动态组件传参跟普通组件一样</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#1默认的打包过程">1.默认的打包过程</a></li>
+    <li><a href="#2代码的分包">2.代码的分包</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#1背景">1.背景</a></li>
+    <li><a href="#2defineasynccomponent接受两种类型的参数">2.defineAsyncComponent接受两种类型的参数：</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#1注意">1.注意：</a></li>
+    <li><a href="#2suspense是一个内置的全局组件该组件有两个插槽">2.Suspense是一个内置的全局组件，该组件有两个插槽：</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#1使用场景">1.使用场景：</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#1原生input标签的v-model">1.原生input标签的v-model</a></li>
+    <li><a href="#2组件的v-model">2.组件的v-model</a></li>
+    <li><a href="#3代码案例">3.代码案例</a></li>
+    <li><a href="#4子组件input标签中vlaue和input简写方式">4.子组件input标签中:vlaue和@input简写方式</a></li>
+    <li><a href="#5组件中绑定两个v-model">5.组件中绑定两个v-model</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>title: &lsquo;vue基础&rsquo;
+subtitle: &rsquo;'
+date: 2023-03-09T13:58:36+08:00
+draft: false</p>
+<p>tags: [slot][组件]
+categories: [vue]</p>
+<p>hiddenFromHomePage: false
+hiddenFromSearch: false</p>
+<p>featuredImage: &rsquo;'
+featuredImagePreview: ''</p>
+<h2 id="license-a-rellicense-external-nofollow-noopener-noreffer-hrefhttpscreativecommonsorglicensesby-nc40-target_blankcc-by-nc-40a">license: &lsquo;<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>&rsquo;</h2>
+<h1 id="一插槽slot的基本使用测试数据的作用域">一、插槽Slot的基本使用（测试数据的作用域）</h1>
+<h2 id="1基本使用组件的内容全部替换到插槽中">1.基本使用：组件的内容全部替换到插槽中</h2>
+<h2 id="2数据的作用域父组件的数据也可以显示到子组件中">2.数据的作用域：父组件的数据也可以显示到子组件中</h2>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://images-jsh.oss-cn-beijing.aliyuncs.com/ljl/fad5bf78-9fde-11ed-8f2f-5cea1d84200c.png"
+        data-srcset="https://images-jsh.oss-cn-beijing.aliyuncs.com/ljl/fad5bf78-9fde-11ed-8f2f-5cea1d84200c.png, https://images-jsh.oss-cn-beijing.aliyuncs.com/ljl/fad5bf78-9fde-11ed-8f2f-5cea1d84200c.png 1.5x, https://images-jsh.oss-cn-beijing.aliyuncs.com/ljl/fad5bf78-9fde-11ed-8f2f-5cea1d84200c.png 2x"
+        data-sizes="auto"
+        alt="https://images-jsh.oss-cn-beijing.aliyuncs.com/ljl/fad5bf78-9fde-11ed-8f2f-5cea1d84200c.png"
+        title="img" /></p>
+<h1 id="二具名插槽slot的基本使用">二、具名插槽Slot的基本使用：</h1>
+<h2 id="1基本使用">1.基本使用：</h2>
+<ul>
+<li>子组件：<code>&lt;slot name=&quot;left&quot;&gt;&lt;/slot&gt;</code></li>
+<li>父组件：<code>&lt;template v-slot:left&gt; &lt;button&gt;</code>左边的按钮<code>&lt;/button&gt; &lt;/template&gt;</code>，</li>
+<li>可以简写：<code>&lt;template #left&gt; &lt;button&gt;</code>左边的按钮<code>&lt;/button&gt; &lt;/template&gt;</code></li>
+</ul>
+<h2 id="2默认插槽名">2.默认插槽名：</h2>
+<ul>
+<li>一个不带 name 的slot，会带有隐含的名字 default</li>
+</ul>
+<h2 id="3动态插槽名">3.动态插槽名：</h2>
+<ul>
+<li>目前我们使用的插槽名称都是固定的，比如 v-slot:left等等，我们可以通过 <code>v-slot:[dynamicSlotName]</code>方式动态绑定一个名称</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://images-jsh.oss-cn-beijing.aliyuncs.com/ljl/fb4c3846-9fde-11ed-8689-5cea1d84200c.png"
+        data-srcset="https://images-jsh.oss-cn-beijing.aliyuncs.com/ljl/fb4c3846-9fde-11ed-8689-5cea1d84200c.png, https://images-jsh.oss-cn-beijing.aliyuncs.com/ljl/fb4c3846-9fde-11ed-8689-5cea1d84200c.png 1.5x, https://images-jsh.oss-cn-beijing.aliyuncs.com/ljl/fb4c3846-9fde-11ed-8689-5cea1d84200c.png 2x"
+        data-sizes="auto"
+        alt="https://images-jsh.oss-cn-beijing.aliyuncs.com/ljl/fb4c3846-9fde-11ed-8689-5cea1d84200c.png"
+        title="img" /></p>
+<h1 id="三渲染作用域作用域插槽的背景">三、渲染作用域（作用域插槽的背景）</h1>
+<h2 id="1渲染作用域">1.渲染作用域：</h2>
+<ul>
+<li>父级模板里的所有内容都是在父级作用域中编译的</li>
+<li>子模板里的所有内容都是在子作用域中编译的</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://images-jsh.oss-cn-beijing.aliyuncs.com/ljl/fbaf79db-9fde-11ed-bffc-5cea1d84200c.png"
+        data-srcset="https://images-jsh.oss-cn-beijing.aliyuncs.com/ljl/fbaf79db-9fde-11ed-bffc-5cea1d84200c.png, https://images-jsh.oss-cn-beijing.aliyuncs.com/ljl/fbaf79db-9fde-11ed-bffc-5cea1d84200c.png 1.5x, https://images-jsh.oss-cn-beijing.aliyuncs.com/ljl/fbaf79db-9fde-11ed-bffc-5cea1d84200c.png 2x"
+        data-sizes="auto"
+        alt="https://images-jsh.oss-cn-beijing.aliyuncs.com/ljl/fbaf79db-9fde-11ed-bffc-5cea1d84200c.png"
+        title="在这里插入图片描述" /></p>
+<h1 id="四作用域插槽父组件没法直接用子组件的数据有渲染作用域">四、作用域插槽（父组件没法直接用子组件的数据，有渲染作用域）</h1>
+<h2 id="1作用">1.作用：</h2>
+<p>父组件可以访问子组件的数据，并按照父组件期望的形式进行数据展示（子组件定义插槽）</p>
+<h2 id="2简单理解">2.简单理解：</h2>
+<p>作用域插槽就是子组件用$emit向父组件传递数据的另一种表现</p>
+<ul>
+<li>父组件访问子组件的数据：
+<ul>
+<li>父组件获取组件slot属性：<code>v-slot=&quot;slotProps&quot;</code>，</li>
+<li>子组件将数据绑定到动态属性中：<code>&lt;slot :item=&quot;item&quot;&gt;&lt;/slot&gt;</code></li>
+</ul>
+</li>
+<li>按照父组件期望的形式进行数据展示：
+<ul>
+<li>子组件中定义slot插槽：<code>&lt;slot :item=&quot;item&quot; :index=&quot;index&quot;&gt;&lt;/slot&gt;</code></li>
+<li>父组件通过插槽的方式替换子组件的插槽内容</li>
+</ul>
+</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://blog-1305504063.cos.ap-beijing.myqcloud.com/fc2ec9de-9fde-11ed-91e5-5cea1d84200c.png"
+        data-srcset="https://blog-1305504063.cos.ap-beijing.myqcloud.com/fc2ec9de-9fde-11ed-91e5-5cea1d84200c.png, https://blog-1305504063.cos.ap-beijing.myqcloud.com/fc2ec9de-9fde-11ed-91e5-5cea1d84200c.png 1.5x, https://blog-1305504063.cos.ap-beijing.myqcloud.com/fc2ec9de-9fde-11ed-91e5-5cea1d84200c.png 2x"
+        data-sizes="auto"
+        alt="https://blog-1305504063.cos.ap-beijing.myqcloud.com/fc2ec9de-9fde-11ed-91e5-5cea1d84200c.png"
+        title="img" /></p>
+<h1 id="五动态组件">五、动态组件</h1>
+<h2 id="1概念">1.概念</h2>
+<p>动态组件是使用 <code>component</code> 组件，通过一个特殊的<code>attribute</code> <code>is</code> 来实现</p>
+<h2 id="2基本用法">2.基本用法：</h2>
+<h2 id="3is绑定的值是什么内容">3.<code>is</code>绑定的值是什么内容？</h2>
+<ul>
+<li>可以是通过<code>component函数注册的组件</code></li>
+<li>在一个组件对象的<code>components对象中注册的组件（局部组件）</code></li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://images-jsh.oss-cn-beijing.aliyuncs.com/ljl/fc9f1b3f-9fde-11ed-918d-5cea1d84200c.png"
+        data-srcset="https://images-jsh.oss-cn-beijing.aliyuncs.com/ljl/fc9f1b3f-9fde-11ed-918d-5cea1d84200c.png, https://images-jsh.oss-cn-beijing.aliyuncs.com/ljl/fc9f1b3f-9fde-11ed-918d-5cea1d84200c.png 1.5x, https://images-jsh.oss-cn-beijing.aliyuncs.com/ljl/fc9f1b3f-9fde-11ed-918d-5cea1d84200c.png 2x"
+        data-sizes="auto"
+        alt="https://images-jsh.oss-cn-beijing.aliyuncs.com/ljl/fc9f1b3f-9fde-11ed-918d-5cea1d84200c.png"
+        title="在这里插入图片描述" /></p>
+<h1 id="六动态组件传参">六、动态组件传参</h1>
+<h2 id="1动态组件传参跟普通组件一样">1.动态组件传参跟普通组件一样</h2>
+<p>区别：当前动态组件的 is 绑定哪个组件，参数就在哪个组件上</p>
+<p><a href="https://blog-1305504063.cos.ap-beijing.myqcloud.com/fcf58699-9fde-11ed-bdcd-5cea1d84200c.png" target="_blank" rel="noopener noreffer "><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://blog-1305504063.cos.ap-beijing.myqcloud.com/fcf58699-9fde-11ed-bdcd-5cea1d84200c.png"
+        data-srcset="https://blog-1305504063.cos.ap-beijing.myqcloud.com/fcf58699-9fde-11ed-bdcd-5cea1d84200c.png, https://blog-1305504063.cos.ap-beijing.myqcloud.com/fcf58699-9fde-11ed-bdcd-5cea1d84200c.png 1.5x, https://blog-1305504063.cos.ap-beijing.myqcloud.com/fcf58699-9fde-11ed-bdcd-5cea1d84200c.png 2x"
+        data-sizes="auto"
+        alt="https://blog-1305504063.cos.ap-beijing.myqcloud.com/fcf58699-9fde-11ed-bdcd-5cea1d84200c.png"
+        title="在这里插入图片描述" /></a></p>
+<h1 id="七webpack代码组件分包">七、webpack代码（组件）分包</h1>
+<h2 id="1默认的打包过程">1.默认的打包过程</h2>
+<ul>
+<li>默认情况下，在构建整个组件树的过程中，因为组件和组件之间是通过模块化直接依赖的，那么webpack在打包时就会将组 件模块打包到一起（比如一个app.js文件中）</li>
+<li>这个时候随着项目的不断庞大，app.js文件的内容过大，会造成首屏的渲染速度变慢</li>
+</ul>
+<h2 id="2代码的分包">2.代码的分包</h2>
+<ul>
+<li>所以，对于一些不需要立即使用的组件，我们可以单独对它们进行拆分，拆分成一些小的代码块chunk.js</li>
+<li>这些chunk.js会在需要时从服务器加载下来，并且运行代码，显示对应的内容
+<a href="https://blog-1305504063.cos.ap-beijing.myqcloud.com/fd46bf72-9fde-11ed-b8a2-5cea1d84200c.png" target="_blank" rel="noopener noreffer "><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://blog-1305504063.cos.ap-beijing.myqcloud.com/fd46bf72-9fde-11ed-b8a2-5cea1d84200c.png"
+        data-srcset="https://blog-1305504063.cos.ap-beijing.myqcloud.com/fd46bf72-9fde-11ed-b8a2-5cea1d84200c.png, https://blog-1305504063.cos.ap-beijing.myqcloud.com/fd46bf72-9fde-11ed-b8a2-5cea1d84200c.png 1.5x, https://blog-1305504063.cos.ap-beijing.myqcloud.com/fd46bf72-9fde-11ed-b8a2-5cea1d84200c.png 2x"
+        data-sizes="auto"
+        alt="https://blog-1305504063.cos.ap-beijing.myqcloud.com/fd46bf72-9fde-11ed-b8a2-5cea1d84200c.png"
+        title="在这里插入图片描述" /></a></li>
+</ul>
+<h1 id="八异步组件vue的代码分包实际开发用的不多用路由懒加载比较多">八、异步组件：Vue的代码分包（实际开发用的不多，用路由懒加载比较多）</h1>
+<h2 id="1背景">1.背景</h2>
+<ul>
+<li>如果我们的项目过大了，对于某些组件我们希望通过异步的方式来进行加载（目的是可以对其进行分包处理），那 么Vue中给我们提供了一个函数：<code>defineAsyncComponent</code>。</li>
+</ul>
+<h2 id="2defineasynccomponent接受两种类型的参数">2.defineAsyncComponent接受两种类型的参数：</h2>
+<ul>
+<li>类型一：工厂函数，该工厂函数需要返回一个Promise对象；</li>
+<li>类型二：接受一个对象类型，对异步函数进行配置；
+<a href="https://blog-1305504063.cos.ap-beijing.myqcloud.com/fdcf9d3a-9fde-11ed-a21f-5cea1d84200c.png" target="_blank" rel="noopener noreffer "><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://blog-1305504063.cos.ap-beijing.myqcloud.com/fdcf9d3a-9fde-11ed-a21f-5cea1d84200c.png"
+        data-srcset="https://blog-1305504063.cos.ap-beijing.myqcloud.com/fdcf9d3a-9fde-11ed-a21f-5cea1d84200c.png, https://blog-1305504063.cos.ap-beijing.myqcloud.com/fdcf9d3a-9fde-11ed-a21f-5cea1d84200c.png 1.5x, https://blog-1305504063.cos.ap-beijing.myqcloud.com/fdcf9d3a-9fde-11ed-a21f-5cea1d84200c.png 2x"
+        data-sizes="auto"
+        alt="https://blog-1305504063.cos.ap-beijing.myqcloud.com/fdcf9d3a-9fde-11ed-a21f-5cea1d84200c.png"
+        title="在这里插入图片描述" /></a></li>
+</ul>
+<h1 id="九异步组件和suspense">九、异步组件和Suspense：</h1>
+<h2 id="1注意">1.注意：</h2>
+<p>目前Suspense显示的是一个实验性的特性，API随时可能会修改。</p>
+<h2 id="2suspense是一个内置的全局组件该组件有两个插槽">2.Suspense是一个内置的全局组件，该组件有两个插槽：</h2>
+<ul>
+<li>default：如果default可以显示，那么显示default的内容；</li>
+<li>fallback：如果default无法显示，那么会显示fallback插槽的内容；
+<a href="https://blog-1305504063.cos.ap-beijing.myqcloud.com/fe28adc4-9fde-11ed-9a93-5cea1d84200c.png" target="_blank" rel="noopener noreffer "><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://blog-1305504063.cos.ap-beijing.myqcloud.com/fe28adc4-9fde-11ed-9a93-5cea1d84200c.png"
+        data-srcset="https://blog-1305504063.cos.ap-beijing.myqcloud.com/fe28adc4-9fde-11ed-9a93-5cea1d84200c.png, https://blog-1305504063.cos.ap-beijing.myqcloud.com/fe28adc4-9fde-11ed-9a93-5cea1d84200c.png 1.5x, https://blog-1305504063.cos.ap-beijing.myqcloud.com/fe28adc4-9fde-11ed-9a93-5cea1d84200c.png 2x"
+        data-sizes="auto"
+        alt="https://blog-1305504063.cos.ap-beijing.myqcloud.com/fe28adc4-9fde-11ed-9a93-5cea1d84200c.png"
+        title="在这里插入图片描述" /></a></li>
+</ul>
+<h1 id="十组件的ref和refs">十、组件的ref和$refs</h1>
+<h2 id="1使用场景">1.使用场景：</h2>
+<ul>
+<li>某些情况下，我们在组件中想要直接获取到元素对象或者子组件实例，这个时候，我们可以给元素或者组件绑定一个ref的attribute属性</li>
+<li>组件实例有一个<code>$refs</code>属性，它一个对象Object，持有注册过 ref attribute 的所有 DOM 元素和组件实例。
+<a href="https://blog-1305504063.cos.ap-beijing.myqcloud.com/fe7b501a-9fde-11ed-a287-5cea1d84200c.png" target="_blank" rel="noopener noreffer "><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://images-jsh.oss-cn-beijing.aliyuncs.com/ljl/fe7b501a-9fde-11ed-a287-5cea1d84200c.png"
+        data-srcset="https://images-jsh.oss-cn-beijing.aliyuncs.com/ljl/fe7b501a-9fde-11ed-a287-5cea1d84200c.png, https://images-jsh.oss-cn-beijing.aliyuncs.com/ljl/fe7b501a-9fde-11ed-a287-5cea1d84200c.png 1.5x, https://images-jsh.oss-cn-beijing.aliyuncs.com/ljl/fe7b501a-9fde-11ed-a287-5cea1d84200c.png 2x"
+        data-sizes="auto"
+        alt="https://images-jsh.oss-cn-beijing.aliyuncs.com/ljl/fe7b501a-9fde-11ed-a287-5cea1d84200c.png"
+        title="在这里插入图片描述" /></a></li>
+</ul>
+<h1 id="十一组件的v-model">十一、组件的v-model</h1>
+<h2 id="1原生input标签的v-model">1.原生input标签的v-model</h2>
+<ul>
+<li>v-model默认帮助我们完成了两件事：<code>v-bind:value</code>的数据绑定和<code>@input</code>的事件监听</li>
+</ul>
+<h2 id="2组件的v-model">2.组件的v-model</h2>
+<ul>
+<li>v-model默认帮助我们完成了两件事：<code>v-bind:modelValue</code>的数据绑定和<code>@update:model-value</code>的事件监听</li>
+</ul>
+<h2 id="3代码案例">3.代码案例</h2>
+<ul>
+<li><code>&lt;hy-input v-model=&quot;message&quot;&gt;&lt;/hy-input&gt;</code></li>
+<li><code>&lt;hy-input :modelValue=&quot;message&quot; @update:model-value=&quot;message = $event&quot;&gt;&lt;/hy-input&gt;</code>
+<a href="https://blog-1305504063.cos.ap-beijing.myqcloud.com/fec8c36b-9fde-11ed-9329-5cea1d84200c.png" target="_blank" rel="noopener noreffer "><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://images-jsh.oss-cn-beijing.aliyuncs.com/ljl/fec8c36b-9fde-11ed-9329-5cea1d84200c.png"
+        data-srcset="https://images-jsh.oss-cn-beijing.aliyuncs.com/ljl/fec8c36b-9fde-11ed-9329-5cea1d84200c.png, https://images-jsh.oss-cn-beijing.aliyuncs.com/ljl/fec8c36b-9fde-11ed-9329-5cea1d84200c.png 1.5x, https://images-jsh.oss-cn-beijing.aliyuncs.com/ljl/fec8c36b-9fde-11ed-9329-5cea1d84200c.png 2x"
+        data-sizes="auto"
+        alt="https://images-jsh.oss-cn-beijing.aliyuncs.com/ljl/fec8c36b-9fde-11ed-9329-5cea1d84200c.png"
+        title="在这里插入图片描述" /></a></li>
+</ul>
+<h2 id="4子组件input标签中vlaue和input简写方式">4.子组件input标签中:vlaue和@input简写方式</h2>
+<p><a href="https://blog-1305504063.cos.ap-beijing.myqcloud.com/ff270f52-9fde-11ed-869d-5cea1d84200c.png" target="_blank" rel="noopener noreffer "><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://images-jsh.oss-cn-beijing.aliyuncs.com/ljl/ff270f52-9fde-11ed-869d-5cea1d84200c.png"
+        data-srcset="https://images-jsh.oss-cn-beijing.aliyuncs.com/ljl/ff270f52-9fde-11ed-869d-5cea1d84200c.png, https://images-jsh.oss-cn-beijing.aliyuncs.com/ljl/ff270f52-9fde-11ed-869d-5cea1d84200c.png 1.5x, https://images-jsh.oss-cn-beijing.aliyuncs.com/ljl/ff270f52-9fde-11ed-869d-5cea1d84200c.png 2x"
+        data-sizes="auto"
+        alt="https://images-jsh.oss-cn-beijing.aliyuncs.com/ljl/ff270f52-9fde-11ed-869d-5cea1d84200c.png"
+        title="在这里插入图片描述" /></a></p>
+<h2 id="5组件中绑定两个v-model">5.组件中绑定两个v-model</h2>
+<p><a href="https://blog-1305504063.cos.ap-beijing.myqcloud.com/ff90b98f-9fde-11ed-80f7-5cea1d84200c.png" target="_blank" rel="noopener noreffer "><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://images-jsh.oss-cn-beijing.aliyuncs.com/ljl/ff90b98f-9fde-11ed-80f7-5cea1d84200c.png"
+        data-srcset="https://images-jsh.oss-cn-beijing.aliyuncs.com/ljl/ff90b98f-9fde-11ed-80f7-5cea1d84200c.png, https://images-jsh.oss-cn-beijing.aliyuncs.com/ljl/ff90b98f-9fde-11ed-80f7-5cea1d84200c.png 1.5x, https://images-jsh.oss-cn-beijing.aliyuncs.com/ljl/ff90b98f-9fde-11ed-80f7-5cea1d84200c.png 2x"
+        data-sizes="auto"
+        alt="https://images-jsh.oss-cn-beijing.aliyuncs.com/ljl/ff90b98f-9fde-11ed-80f7-5cea1d84200c.png"
+        title="在这里插入图片描述" /></a></p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 0001-01-01</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/%E6%8F%92%E6%A7%BD%E5%8A%A8%E6%80%81%E7%BB%84%E4%BB%B6%E4%BC%A0%E5%8F%82/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+            <a href="/vue%E7%AC%94%E8%AE%B0/" class="next" rel="next" title="vue基础">vue基础<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2018 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://github.com/buchi-xiangcai" target="_blank">佳丽</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":50,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
